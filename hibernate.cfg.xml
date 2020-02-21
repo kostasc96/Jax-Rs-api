@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory name="session_factory">
+    	<property name="dialect">org.hibernate.dialect.OracleDialect</property>
+    	<property name="hibernate.connection.driver.class">oracle.jdbc.driver.OracleDriver</property>
+       	<property name="hibernate.connection.url">http://localhost:1521</property>
+        <property name="hibernate.connection.username">photo_app</property>
+        <property name="hibernate.connection.password">photo_app</property>
+        
+        <property name="hibernate.id.new_generator_mappings">true</property>
+        <property name="show_sql">true</property>
+    	<property name="hibernate.hbm2ddl.auto">update</property>
+    	
+    	<property name="hibernate.c3p0.min_size">3</property>
+    	<property name="hibernate.c3p0.max_size">20</property>
+    	<property name="hibernate.c3p0.timeout">300</property>
+    	<property name="hibernate.c3p0.max_statements">50</property>
+    	
+    	<mapping class="com.appsdeveloperblog.app.ws.io.entity.UserEntity"></mapping>
+        
+    </session-factory>
+</hibernate-configuration>
